@@ -110,13 +110,13 @@ from django.shortcuts import get_object_or_404
 #         return Response(status=status.HTTP_204_NO_CONTENT)
 #----------------------------------------------------------------------------------------------------------------------------------
 
-#By Using ModelViewSet
-# class BlogView(viewsets.ModelViewSet):
-#     queryset = Blog.objects.all()
-#     serializer_class = BlogSerializer
+# By Using ModelViewSet
+class BlogView(viewsets.ModelViewSet):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
 
-# class CommentView(viewsets.ModelViewSet):
-#     queryset = Comment.objects.all()
-#     serializer_class = CommentSerializer
+class CommentView(viewsets.ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
 #-----------------------------------------------------------------------------------------------------------------------------------
