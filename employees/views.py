@@ -9,6 +9,7 @@ from rest_framework import mixins, generics, viewsets
 from django.shortcuts import get_object_or_404
 from blog.models import Blog, Comment
 from blog.serializers import BlogSerializer, CommentSerializer 
+from .filters import EmployeeFilter
 
 
 # Create your views here.
@@ -96,7 +97,7 @@ from blog.serializers import BlogSerializer, CommentSerializer
 #     queryset = Employee.objects.all()
 #     serializer_class = EmployeeSerializer
 
-#SEPERATE..........
+#SEPERATE..........blogg/blogs/
 # class EmployeeDetail(generics.RetrieveAPIView, generics.UpdateAPIView, generics.DestroyAPIView):
 #     queryset = Employee.objects.all()
 #     serializer_class = EmployeeSerializer
@@ -145,5 +146,6 @@ from blog.serializers import BlogSerializer, CommentSerializer
 class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
-
+    # filterset_fields = ['designation']
+    filterset_class = EmployeeFilter
 #-----------------------------------------------------------------------------------------End---------------------------------------------------------------------------------------------
