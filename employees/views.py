@@ -7,6 +7,8 @@ from rest_framework import status
 from django.http import Http404
 from rest_framework import mixins, generics, viewsets
 from django.shortcuts import get_object_or_404
+from blog.models import Blog, Comment
+from blog.serializers import BlogSerializer, CommentSerializer 
 
 
 # Create your views here.
@@ -69,14 +71,14 @@ from django.shortcuts import get_object_or_404
 
 
 # class EmployeeDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin, generics.GenericAPIView):
-#     queryset = Employee.obj        "id": 4,ects.all()        "id": 4,
+#     queryset = Employee.objects.all()
 #     serializer_class = EmployeeSerializer
 
 #     def get(self, request, pk):
 #         return self.retrieve(request, pk)
 
 #     def put(self, request, pk):
-#         return self.update(request, pk)        "id": 4,
+#         return self.update(request, pk)        
 
 #     def delete(self, request, pk):
 #         return self.destroy(request, pk)    

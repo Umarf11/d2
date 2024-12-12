@@ -10,6 +10,5 @@ urlpatterns = [
     # path("", views.Employees.as_view()),
     # path("<int:pk>/", views.EmployeeDetail.as_view()),
 
-    path("", include(router.urls))
-
+    path("", include(router.urls)),
 ]
